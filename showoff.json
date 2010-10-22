@@ -1,1 +1,8 @@
-{ "name": "Iniciando com TDD em django", "sections": [ {"section":"one"} ]}
+[ 
+    {"section":"title"}, 
+    {"section":"django"}, 
+    {"section":"tdd"}, 
+    {"section":"bdd"}, 
+    {"section":"lets_do_it"} 
+
+]

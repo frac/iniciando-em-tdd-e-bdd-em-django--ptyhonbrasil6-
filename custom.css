@@ -1,0 +1,27 @@
+pre {
+    background-color: #c4b0df;
+    padding: 20px;
+    font-size:2.0em;
+    overflow:auto;
+    line-height:140%;
+
+}
+
+pre.sh_sourceCode {
+    background-color: #c4b0df;
+    /*font-weight:bold;*/
+}
+
+pre.sh_sourceCode .sh_string {
+    color:#660000;    
+    font-family: Monaco, monospace    
+}
+
+pre.sh_sourceCode .sh_keyword {
+    color:#000066;    
+    font-family: Monaco, monospace    
+}
+
+code{
+    font-family: Monaco, monospace    
+}
