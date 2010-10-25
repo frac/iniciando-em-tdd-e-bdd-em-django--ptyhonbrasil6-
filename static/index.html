@@ -1,0 +1,744 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN"
+	"http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+  <title></title>
+
+  <link rel="stylesheet" href="./css/reset.css" type="text/css"/>
+  <link rel="stylesheet" href="./css/showoff.css" type="text/css"/>
+
+  <script type="text/javascript" src="./js/jquery-1.4.2.min.js"></script>
+  <script type="text/javascript" src="./js/jquery.cycle.all.js"></script>
+	<script type="text/javascript" src="./js/jquery-print.js"></script>
+  <script type="text/javascript" src="./js/jquery.batchImageLoad.js"></script>
+
+  <script type="text/javascript" src="./js/jquery.doubletap-0.1.js"></script>
+
+  <script type="text/javascript" src="./js/fg.menu.js"></script>
+  <script type="text/javascript" src="./js/showoff.js"></script>
+  <script type="text/javascript" src="./js/jTypeWriter.js"> </script>
+  <script type="text/javascript" src="./js/sh_main.min.js"></script>
+  <script type="text/javascript" src="./js/core.js"></script>
+  <script type="text/javascript" src="./js/showoffcore.js"></script>
+
+  <link type="text/css" href="./css/fg.menu.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/theme/ui.all.css" media="screen" rel="stylesheet" />
+  <link type="text/css" href="./css/sh_style.css" rel="stylesheet" >
+
+  
+    <link rel="stylesheet" href="file/custom.css" type="text/css"/>
+  
+
+  
+
+  <script type="text/javascript">
+  $(function(){
+    setupPreso(false, '.');
+  });
+  </script>
+</head>
+
+<body>
+
+
+<a tabindex="0" href="#search-engines" class="fg-button fg-button-icon-right ui-widget ui-state-default ui-corner-all" id="navmenu"><span class="ui-icon ui-icon-triangle-1-s"></span>slides</a>
+<div id="navigation" class="hidden"></div>
+
+<div id="help">
+  <table>
+    <tr><td class="key">space, &rarr;</td><td>next slide</td></tr>
+    <tr><td class="key">&larr;</td><td>previous slide</td></tr>
+    <tr><td class="key">d</td><td>debug mode</td></tr>
+    <tr><td class="key">## &lt;ret&gt;</td><td>go to slide #</td></tr>
+    <tr><td class="key">c</td><td>table of contents (vi)</td></tr>
+    <tr><td class="key">f</td><td>toggle footer</td></tr>
+    <tr><td class="key">r</td><td>reload slides</td></tr>
+    <tr><td class="key">z</td><td>toggle help (this)</td></tr>
+  </table>
+</div>
+
+<div id="preso">loading presentation...</div>
+<div id="footer">
+  <span id="slideInfo"></span>
+  <span id="debugInfo"></span>
+</div>
+
+<div id="slides" class="offscreen" style="display:none;">
+<div class="slide" data-transition="none"><div class="content" ref="title/01_new_slide/1">
+<h1>Iniciando com TDD em django</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="title/01_new_slide/2">
+<h1>Eu</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="title/01_new_slide/3">
+<h1>Adriano Petrich</h1>
+
+<ul>
+<li>@fractal</li>
+<li>odeia acentos, adora minusculas</li>
+<li>adora dormir tranquilo</li>
+<li>fan&#xE1;tico por testes</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="title/01_new_slide/4">
+<ul>
+<li>fan&#xE1;tico por coisas que funcionam</li>
+<li>fan&#xE1;tico por coisas que continuam funcionando</li>
+<li>especialmente que continuam funcionando depois que ele toca nelas</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="title/01_new_slide/5">
+<h1>Iniciando com TDD em <span style="color:#f00;">django</span></h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="django/01_new_slide/1">
+<h1>Django</h1>
+
+<ul>
+<li>framework web</li>
+<li>em python(d&#xE3;&#xE3;)</li>
+<li>DRY</li>
+<li>muito muito legal</li>
+<li>urls legais</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="django/01_new_slide/2">
+<h1>C&#xF3;digo sem testes &#xE9; c&#xF3;digo j&#xE1; quebrado quando foi planejado</h1>
+
+<pre><code>-- Jacob Kaplan-Moss 
+</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="django/01_new_slide/3">
+<h1>mas por que esse fanatismo?</h1>
+
+<ul>
+<li>principalmente porque funciona</li>
+<li>porque te faz dormir melhor</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="django/01_new_slide/4">
+<h1>Ci&#xEA;ncia da computa&#xE7;&#xE3;o &#xE9; tanto sobre computadores quanto como a astronomia &#xE9; sobre telesc&#xF3;pios</h1>
+
+<pre><code>-- E W Dijkstra
+</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="django/01_new_slide/5">
+<h1>Test Driven Development &#xE9; tanto sobre testes assim quanto a ci&#xEA;ncia da computa&#xE7;&#xE3;o &#xE9; sobre computadores</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="django/01_new_slide/6">
+<h1>TDD &#xE9; sobre desenvolvimento e qualidade</h1>
+
+<ul>
+<li>Testes s&#xE3;o um subproduto</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="tdd/tdd/1">
+<h1>Test Driven Development</h1>
+
+<ul>
+<li>&#xE9; uma das estrategias</li>
+<li>pode ser usada de forma subversiva</li>
+<li>f&#xE1;cil</li>
+<li>mas &#xE9; s&#xF3; uma das estrategias</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="tdd/tdd/2">
+<h1>TDD</h1>
+
+<ul>
+<li><p>S&#xF3; escreve <strong>c&#xF3;digo</strong> quando testes falham</p></li>
+<li><p>S&#xF3; escreve <strong>testes</strong> quando testes passam</p></li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/3">
+<h1>M&#xE3;os a obra</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/4">
+<h2>instala o django</h2>
+
+<pre class="sh_Sh"><code>$ sudo easy_install pip
+$ sudo pip install django</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/5">
+<h2>cria o projeto</h2>
+
+<pre class="sh_sh"><code>$ django-admin.py startproject inventario</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/6">
+<pre class="sh_sh"><code>$ tree inventario/
+
+inventario/
+&#x251C;&#x2500;&#x2500; __init__.py
+&#x251C;&#x2500;&#x2500; manage.py
+&#x251C;&#x2500;&#x2500; settings.py
+&#x2514;&#x2500;&#x2500; urls.py</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/7">
+<pre class="sh_sh"><code>$ cd inventario/
+
+$ vi settings.py</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/8">
+<h2>hackeia as settings</h2>
+
+<pre class="sh_python"><code>import os
+
+PROJECT_PATH = os.path.abspath( os.path.split(__file__)[0] )
+
+MEDIA_ROOT = os.path.join( PROJECT_PATH, "media")
+
+TEMPLATE_DIRS = (
+    os.path.join( PROJECT_PATH, "templates"),
+)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/9">
+<h2>configura o banco</h2>
+
+<pre class="sh_python"><code>
+DATABASES = {
+  'default': {
+    'ENGINE':
+      'django.db.backends.sqlite3',
+    'NAME':
+      PROJECT_PATH + "/inventario.db",
+  }
+}</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/10">
+<h1>quase pronto</h1>
+
+<pre class="sh_sh"><code>$ chmod +x manage.py
+
+$ ./manage.py syncdb</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/11">
+<h1>testa</h1>
+
+<pre class="sh_sh"><code>./manage.py test
+
+------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+Destroying test database 'default'...</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="tdd/tdd/12">
+<h1>TDD</h1>
+
+<ul>
+<li><p>S&#xF3; escreve <strong>c&#xF3;digo</strong> quando testes falham</p></li>
+<li><p>S&#xF3; escreve <strong>testes</strong> quando testes passam</p></li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="tdd/tdd/13">
+<h1>Passou</h1>
+
+<ul>
+<li>Escreve testes</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/14">
+<h1>Mais Testes, ent&#xE3;o</h1>
+
+<pre class="sh_sh"><code>$ ./manage.py startapp hardware
+$ cd hardware/</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/15">
+<h1>disclaimer</h1>
+
+<pre class="sh_sh"><code>$ rm tests.py
+$ mkdir tests
+$ touch tests/__init__.py
+$ touch tests/test_models.py</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/16">
+<h1>vi tests/test_models.py</h1>
+
+<pre class="sh_python"><code>#coding:utf8
+from django.test import TestCase
+
+class ModelTest(TestCase):</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/17">
+<h1>Teste de importa&#xE7;&#xE3;o</h1>
+
+<pre class="sh_python"><code>
+def test_existe(self):
+  """ O computador esta la? """
+  try:
+    from hardware.models import Computador
+  except ImportError:
+    self.fail('Nao existe o model computador')</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/18">
+<h1>Inclui a app no projeto</h1>
+
+<pre class="sh_python"><code>
+INSTALLED_APPS = (
+    ...
+    'inventario.hardware',
+)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/19">
+<h1>Testa</h1>
+
+<pre class="sh_python"><code>
+
+./manage.py test
+
+------------------------------------
+Ran 0 tests in 0.000s
+
+OK
+Destroying test database 'default'...</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="tdd/tdd/20">
+<h1>0 testes!</h1>
+
+<ul>
+<li>voce tem que declarar os testes explicitamente no <strong>init</strong>.py</li>
+<li>ou tem?</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="tdd/tdd/21">
+<h1>nose</h1>
+
+<ul>
+<li><p>Acha testes para voc&#xEA; sem que voc&#xEA; tenha que por eles no <strong>init</strong>.py</p></li>
+<li><p>D&#xE1; pra chamar o pdb no ponto em que falha ( --pdb-failures) (ou ipdb)</p></li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/22">
+<h1>django-nose</h1>
+
+<pre class="sh_sh"><code>
+$ pip install nose
+$ pip install django-nose
+$ pip install NoseNotify #opcional</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/23">
+<h1>settings.py</h1>
+
+<pre class="sh_python"><code>
+TEST_RUNNER = 'django_nose.NoseTestSuiteRunner'
+
+INSTALLED_APPS = (
+    ...
+    'south', # migracoes
+    'django_nose', # depois do south
+)
+NOSE_ARGS = [ '--with-notify',
+    #'--pdb-failures',
+]</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/24">
+<h1>Testa de novo</h1>
+
+<pre class="sh_python"><code>
+F
+====================================
+FAIL: O computador esta la?
+------------------------------------
+Traceback (most recent call last):
+  File "test_models", line 18, in test_existe
+    self.fail('Nao existe o model computador')
+AssertionError: Nao existe o model computador
+------------------------------------
+Ran 1 test in 0.003s</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="tdd/tdd/25">
+<h1>TDD</h1>
+
+<ul>
+<li><p>S&#xF3; escreve <strong>c&#xF3;digo</strong> quando testes falham</p></li>
+<li><p>S&#xF3; escreve <strong>testes</strong> quando testes passam</p></li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="tdd/tdd/26">
+<h1>Falhou</h1>
+
+<ul>
+<li>Escreve c&#xF3;digo</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/27">
+<h1>vi hardware/models.py</h1>
+
+<pre class="sh_python"><code>
+class Computador(models.Model):
+    """representa um computador"""
+    pass</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/28">
+<h1>testa</h1>
+
+<pre class="sh_python"><code>
+.
+------------------------------------
+Ran 1 test in 0.014s</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets incremental" ref="tdd/tdd/29">
+<h1>O que voce esta testando?</h1>
+
+<ul>
+<li>tenha certeza do que voce esta testando</li>
+<li>nao teste a framework</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/30">
+<h1>propriedades</h1>
+
+<pre class="sh_python"><code>from django.test import TestCase
+from inventario.hardware.models import Computador
+
+class TestHardwareProps(TestCase):
+  """Verifica que as propriedades do app hardware"""
+
+  def testa_computador_props(self):
+    computador = Computador()
+    self.assertTrue(hasattr(computador, "desc"))</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/31">
+<h1>propriedades</h1>
+
+<pre class="sh_sh"><code>F..
+============================
+FAIL: testa_computador_props
+----------------------------
+Traceback (most recent call last):
+  File "inventario/hardware/tests/base_test.py", 
+    line 9, in testa_computador_props
+    self.assertTrue(hasattr(computador, "desc"))
+AssertionError
+
+----------------------------
+Ran 3 tests in 0.003s</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/32">
+<h1>escreve codigo</h1>
+
+<pre class="sh_python"><code>class Computador(models.Model):
+    desc = models.CharField(max_length=64)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/33">
+<h1>faz sentido?</h1>
+
+<pre class="sh_python"><code>def testa_computador_props(self):
+    computador = Computador()
+    self.assertTrue(hasattr(computador, "desc"))
+    desc = "a"*64
+    computador.desc = desc
+    try:
+        computador.save()
+    except DatabaseError:
+        self.fail("Nao consegui salvar desc")</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="tdd/tdd/34">
+<h1>E isso?</h1>
+
+<pre class="sh_python"><code>...        
+desc = "a"*65
+computador.desc = desc
+try:
+    computador.save()
+    self.fail("tamanho maximo nao respeitado")
+except DatabaseError:
+    pass</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="tdd/tdd/35">
+<h1>TDD</h1>
+
+<ul>
+<li>nao &#xE9; a unica alternativa</li>
+</ul>
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="bdd/01_new_slide/1">
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content bullets" ref="bdd/01_new_slide/2">
+<h1>Behavior Driven Development</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="bdd/01_new_slide/3">
+<h1>Iniciando com BDD em django</h1>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/1">
+
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/2">
+<h1>instala o lettuce</h1>
+
+<pre class="sh_sh"><code>$ sudo pip install lettuce</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/3">
+<h1>cria a app de pessoas</h1>
+
+<pre class="sh_sh"><code>$ ./manage.py startapp pessoas</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/4">
+<h1>instala as apps</h1>
+
+<pre class="sh_sh"><code>INSTALLED_APPS = (
+    'django.contrib.auth',
+    'django.contrib.contenttypes',
+    'django.contrib.sessions',
+    'django.contrib.sites',
+    'django.contrib.messages',
+    'django.contrib.admin',
+    'lettuce.django', # &lt;==
+    'inventario.pessoas',# &lt;==
+)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/5">
+<h1>cria as features de pessoas</h1>
+
+<pre class="sh_sh"><code>$ mkdir pessoas/features</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/6">
+<pre class="sh_sh"><code>$ tree 
+&#x251C;&#x2500;&#x2500; __init__.py
+&#x251C;&#x2500;&#x2500; inventario.db
+&#x251C;&#x2500;&#x2500; manage.py
+&#x251C;&#x2500;&#x2500; pessoas
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; features # &lt;==
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; __init__.py
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; models.py
+&#x2502;&#xA0;&#xA0; &#x251C;&#x2500;&#x2500; tests.py
+&#x2502;&#xA0;&#xA0; &#x2514;&#x2500;&#x2500; views.py
+&#x251C;&#x2500;&#x2500; settings.py
+&#x251C;&#x2500;&#x2500; templates
+&#x2514;&#x2500;&#x2500; urls.py</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/7">
+<h1>cria o arquivo de features</h1>
+
+<pre class="sh_sh"><code>cd pessoas/features
+vi pessoas.feature</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/8">
+<pre class="sh_spec"><code># language: pt-br
+Funcionalidade: criacao de pessoas 
+  Como o administrador
+  Eu crio as pessoas pelo admin
+  Para verificar que esta tudo configurado
+
+  Cen&#xE1;rio: Verificar que os modelos existem e estao no admin
+    Dado que a aplicacao pessoas tem o modelo Pessoa
+    Entao a aplicacao tem admin
+    E o modelo esta registrado</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/9">
+<h1>harvest</h1>
+
+<pre class="sh_sh"><code>$ ./manage.py harvest</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/10">
+<pre class="sh_sh"><code>Djangos builtin server is running at 0.0.0.0:8000
+
+Funcionalidade: criacao de pessoas                           # pessoas/features/pessoas.feature:3
+  Como o administrador                                       # pessoas/features/pessoas.feature:4
+  Eu crio as pessoas pelo admin                              # pessoas/features/pessoas.feature:5
+  Para verificar que esta tudo configurado                   # pessoas/features/pessoas.feature:6
+
+  Cen&#xE1;rio: Verificar que os modelos existem e estao no admin # pessoas/features/pessoas.feature:8
+    Dado que a aplicacao pessoas tem o modelo Pessoa         # pessoas/features/pessoas.feature:9
+    Entao a aplicacao tem admin                              # pessoas/features/pessoas.feature:10
+    E o modelo esta registrado                               # pessoas/features/pessoas.feature:11</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/11">
+<pre class="sh_sh"><code>1 feature (0 passed)
+1 scenario (0 passed)
+3 steps (3 undefined, 0 passed) # &lt;==</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/12">
+<pre class="sh_sh"><code>You can implement step definitions for undefined steps with these snippets:
+
+# -*- coding: utf-8 -*-
+from lettuce import step
+
+@step(u'Dado que a aplicacao pessoas tem o modelo Pessoa')
+def dado_que_a_aplicacao_pessoas_tem_o_modelo_pessoa(step):
+    pass
+@step(u'Entao a aplicacao tem admin')
+def entao_a_aplicacao_tem_admin(step):
+    pass
+@step(u'E o modelo esta registrado')
+def e_o_modelo_esta_registrado(step):
+    pass</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/13">
+<pre class="sh_Python"><code># -*- coding: utf-8 -*-
+from lettuce import step
+from lettuce import world
+
+
+@step(u'Dado que a aplicacao +([^ ]*) tem o modelo +([^ ]*)')
+def dado_que_tenho_a_aplicacao_e_modelo(step, aplicacao, modelo):
+  world.aplicacao = aplicacao
+  world.modelo = modelo
+  try:
+    foo = __import__("inventario.%s.models"% aplicacao, globals(), locals(), [modelo,], -1)
+    real = getattr(foo, modelo)
+    world.this_model = real 
+  except ImportError:
+    assert False, "nao encontrei o %s.%s"%(aplicacao,modelo)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/14">
+<h1>harvest</h1>
+
+<pre class="sh_sh"><code>$ ./manage.py harvest</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/15">
+<pre class="sh_sh"><code>
+1 feature (0 passed)
+1 scenario (0 passed)
+3 steps (1 failed, 2 undefined, 0 passed)
+
+You can implement step definitions for undefined steps with these snippets:
+
+...</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/16">
+<h1>Cria os modelos</h1>
+
+<pre class="sh_python"><code>class Pessoa(models.Model):
+  nome = models.CharField(max_length=64)
+  cargo = models.CharField(max_length=32)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/17">
+<h1>harvest</h1>
+
+<pre class="sh_sh"><code>$ ./manage.py syncdb
+$ ./manage.py harvest</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/18">
+<pre class="sh_sh"><code>1 feature (0 passed)
+1 scenario (0 passed)
+3 steps (2 undefined, 1 passed)
+
+You can implement step definitions for undefined steps with these snippets:
+
+...</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/19">
+<pre class="sh_python"><code>@step(u'Entao a aplicacao tem admin')
+def entao_a_aplicacao_tem_admin(step):
+  try:
+    foo = __import__("inventario.%s"% world.aplicacao, globals(), locals(), ["admin",], -1)
+    admin = getattr(foo, "admin")
+    world.admin = admin 
+  except ImportError:
+    assert False, "nao encontrei o admin"</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/20">
+<h1>harvest</h1>
+
+<pre class="sh_sh"><code>$ ./manage.py harvest</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/21">
+<pre class="sh_sh"><code>AssertionError: nao encontrei o admin
+
+1 feature (0 passed)
+1 scenario (0 passed)
+3 steps (1 failed, 1 undefined, 1 passed)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/22">
+<h1>cria o arquivo mesmo que vazio</h1>
+
+<pre class="sh_sh"><code>$ vi pessoas/admin.py
+:wq</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/23">
+<h1>harvest</h1>
+
+<pre class="sh_sh"><code>$ ./manage.py harvest</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/24">
+<pre class="sh_sh"><code>1 feature (0 passed)
+1 scenario (0 passed)
+3 steps (1 undefined, 2 passed)
+
+You can implement step definitions for undefined steps with these snippets:
+...</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/25">
+<pre class="sh_python"><code># -*- coding: utf-8 -*-
+from lettuce import step
+
+@step(u'E o modelo esta registrado')
+def e_o_modelo_esta_registrado(step):
+  try:
+    assert world.this_model in world.admin.admin.site._registry.keys(), "modelo nao encontrado"
+  except AttributeError:
+    assert False, "nao encontrei o registro no admin"</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/26">
+<pre class="sh_sh"><code>AssertionError: nao encontrei o registro no admin
+
+1 feature (0 passed)
+1 scenario (0 passed)
+3 steps (1 failed, 2 passed)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/27">
+<pre class="sh_python"><code>#coding:utf8
+
+from django.contrib import admin
+
+from inventario.pessoas.models import Pessoa
+
+admin.site.register(Pessoa)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/28">
+<pre class="sh_sh"><code>1 feature (1 passed)
+1 scenario (1 passed)
+3 steps (3 passed)</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/29">
+<h1>economia de codigo</h1>
+
+<pre class="sh_sh"><code>$ ./manage.py startapp hardware
+
+# inclui o hardware nas INSTALLED_APPS 
+
+$ cd hardware/
+$ mkdir features
+$ vi features/partesbasicas.feature</code></pre>
+</div>
+</div><div class="slide" data-transition="none"><div class="content" ref="lets_do_it/01_new_slide/30">
+<pre class="sh_sh"><code># -*- coding: utf-8 -*-
+# language: pt-br
+Funcionalidade: Verificar que existam todos os modelos necessarios
+  Como o administrador
+  Eu crio computadores e componentes pelo admin
+  Para verificar se tudo est&#xE1; la
+
+  Cen&#xE1;rio: Verificar que tenho computadores
+    Dado que a aplicacao hardware tem o modelo Computador
+    Entao a aplicacao tem admin
+    E o modelo esta registrado
+
+  Cen&#xE1;rio: Verificar que tenho os componentes
+    Dado que a aplicacao hardware tem o modelo Componente
+    Entao a aplicacao tem admin
+    E o modelo esta registrado</code></pre>
+</div>
+</div>
+</div>
+
+</body>
+</html>
